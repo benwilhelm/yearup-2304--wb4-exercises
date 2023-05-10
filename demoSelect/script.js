@@ -25,6 +25,6 @@ function logSelectedState() {
   const selectedOption = options[selectedIndex];
   console.log(selectedOption.textContent);
 
-  // we'll talk about return false later
+  // return false to prevent page reload on submit
   return false;
 }
