@@ -13,3 +13,18 @@ for (let i in stateNames) {
 
   selectEl.appendChild(optionEl);
 }
+
+const form = document.querySelector('form');
+form.onsubmit = logSelectedState;
+selectEl.onchange = logSelectedState;
+
+function logSelectedState() {
+  const selectedIndex = selectEl.selectedIndex;
+  const options = selectEl.options;
+
+  const selectedOption = options[selectedIndex];
+  console.log(selectedOption.textContent);
+
+  // we'll talk about return false later
+  return false;
+}
