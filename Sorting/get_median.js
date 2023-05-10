@@ -16,7 +16,6 @@ function getMedian(scores) {
   scores.sort(function (a, b) {
     return +a - +b;
   });
-
   if (scores.length % 2 == 0) {
     // is even
 
@@ -32,6 +31,22 @@ function getMedian(scores) {
   }
 }
 
+function getMin(scores) {
+  scores.sort(function (a, b) {
+    return +a - +b;
+  });
+  return scores[0];
+}
+
+function getMax(scores) {
+  scores.sort(function (a, b) {
+    return +b - +a;
+  });
+  return scores[0];
+}
+
+console.log('max score', getMax(myScores));
+console.log('min score', getMin(myScores));
 const median = getMedian(myScores);
 console.log('got median', median);
 
